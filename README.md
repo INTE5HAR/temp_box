@@ -98,7 +98,7 @@ sequenceDiagram
     User->>UI: Enter Donor Info & Tap Save
     UI->>DB: Save/Update Record in Local SQLite
     UI->>HTTP: Backup Record (POST backup)
-    HTTP->>Server: Action: backup, Key: ID, Value: Name;Phone;Email;Location;Group;Type
+    HTTP->>Server: Action: backup, Key: ID, Value: Name#59;Phone#59;Email#59;Location#59;Group#59;Type
     Server-->>HTTP: Backup Confirmation Response
     HTTP-->>UI: Display Toast Notification
 ```
@@ -110,29 +110,29 @@ sequenceDiagram
 The following text uses **Simplified Technical English (ASD-STE100)** rules for clarity and simplicity.
 
 ### 1. App Startup and Account Check
-* The app starts at the **Signup Screen**.
-* The app checks local settings for a saved **User ID**.
-* If a User ID exists, the app opens the **Login Screen**.
-* If no User ID exists, the user enters user details to sign up.
-* The app saves the user settings locally and opens the **Login Screen**.
+- The app starts at the **Signup Screen**.
+- The app checks local settings for a saved **User ID**.
+- If a User ID exists, the app opens the **Login Screen**.
+- If no User ID exists, the user enters user details to sign up.
+- The app saves the user settings locally and opens the **Login Screen**.
 
 ### 2. User Authentication
-* On the **Login Screen**, the user enters the **User ID** and **Password**.
-* If the credentials are correct, the app opens the **Home Screen**.
-* If the credentials are not correct, the app displays an error message.
+- On the **Login Screen**, the user enters the **User ID** and **Password**.
+- If the credentials are correct, the app opens the **Home Screen**.
+- If the credentials are not correct, the app displays an error message.
 
 ### 3. Home Screen Operations
-* On the **Home Screen**, the app fetches donor data from the remote server (`muthosoft.com`) and updates the local SQLite database.
-* The app displays the list of blood donors stored in the local database.
-* Users can search for donors by name, location, or blood group.
-* Users can filter the list by selecting a blood group button.
-* A long tap on a donor item shows a dialog to delete that donor from the local database.
+- On the **Home Screen**, the app fetches donor data from the remote server (`muthosoft.com`) and updates the local SQLite database.
+- The app displays the list of blood donors stored in the local database.
+- Users can search for donors by name, location, or blood group.
+- Users can filter the list by selecting a blood group button.
+- A long tap on a donor item shows a dialog to delete that donor from the local database.
 
 ### 4. Adding and Updating Donor Profiles
-* Tapping **Add New** or tapping an existing donor opens the **Profile Screen**.
-* On the **Profile Screen**, the user enters or edits the donor details (Name, Phone, Email, Location, Blood Group, Availability).
-* When the user taps **Save**, the app saves the donor information into the local SQLite database and sends a backup copy to the remote server.
-* The app then returns to the **Home Screen** and refreshes the list.
+- Tapping **Add New** or tapping an existing donor opens the **Profile Screen**.
+- On the **Profile Screen**, the user enters or edits the donor details (Name, Phone, Email, Location, Blood Group, Availability).
+- When the user taps **Save**, the app saves the donor information into the local SQLite database and sends a backup copy to the remote server.
+- The app then returns to the **Home Screen** and refreshes the list.
 
 ---
 
